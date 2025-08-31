@@ -6,7 +6,7 @@ use CodeIgniter\Router\RouteCollection;
  * @var RouteCollection $routes
  */
 $routes->get('/', 'Home::index');
-$routes->group('rest', ['namespace' => 'App\Controllers'], static function (RouteCollection $routes): void {
+$routes->group('api', ['namespace' => 'App\Controllers'], static function (RouteCollection $routes): void {
     // Endpoint login
     $routes->post('login', 'AuthController::login');
     $routes->resource('users', ['controller' => 'UserController']);
